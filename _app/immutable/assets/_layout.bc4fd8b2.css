@@ -96,8 +96,7 @@ div.mdbody li:nth-of-type(odd) {
 #topbar {
   position: fixed;
   top: 0;
-  height: var(--top-bar-height);
-  padding-bottom: var(--top-bar-height);
+  height: fit-content;
   width: 100%;
   color: var(--main-text-color);
   background-color: #000;
@@ -105,8 +104,6 @@ div.mdbody li:nth-of-type(odd) {
   overflow: hidden;
 }
 #topbarpad {
-  padding-bottom: var(--top-bar-height);
-  height: var(--top-bar-height);
   width: 100%;
   clear: both;
 }

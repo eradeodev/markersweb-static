@@ -1,0 +1,211 @@
+/**
+Global CSS element styles.
+See cls.css for class styles and id.css for id styles. 
+*/
+.indexlink {
+  overflow: clip;
+  overflow-wrap: break-word;
+}
+.idlink {
+  overflow-wrap: normal;
+}
+.idlink:hover {
+  background-color: darkblue;
+}
+.temphighlight {
+  border-left: 5px dashed #ff3f00;
+}
+.expander {
+  width: 2rem;
+  font-size: 1.2rem;
+}
+.expand-hover {
+  margin: 0px;
+  border: none;
+  transition: 1s ease-in-out 0.01s;
+}
+.child-hover {
+  max-height: 3px;
+  border: none;
+  margin: 0;
+  transition: max-height 400ms;
+  transition-delay: 0s;
+}
+.expand-hover:hover > .child-hover {
+  max-height: 100vh;
+  transition: max-height 0s;
+  transition-delay: 0.6s;
+}
+.child-hover:hover > .child-hover {
+  max-height: 100vh;
+  transition: max-height 0s;
+  transition-delay: 0.4s;
+}
+/* Inserting this collapsed row between two flex items will make 
+* the flex item that comes after it break to a new row */
+.flexbreak {
+  flex-basis: 100%;
+  height: 0;
+}
+.fullwidth {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+}
+.prevent-select {
+  user-select: none;
+}
+.mdbody {
+  background-color: #222;
+  flex: 1 100%;
+  cursor: default;
+}
+div.mdbody ul {
+  display: block;
+  border: none;
+}
+div.mdbody li {
+  display: list-item;
+  border: none;
+}
+div.mdbody li:nth-of-type(even) {
+  background-color: #222;
+}
+div.mdbody li:nth-of-type(odd) {
+  background-color: #222;
+}
+.mdbutton {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  max-width: 100%;
+  overflow: visible;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  margin: 0.1rem;
+  user-select: none;
+  touch-action: manipulation;
+}
+#topbar {
+  position: fixed;
+  top: 0;
+  height: var(--top-bar-height);
+  padding-bottom: var(--top-bar-height);
+  width: 100%;
+  color: var(--main-text-color);
+  background-color: #000;
+  z-index: 9999;
+  overflow: hidden;
+}
+#topbarpad {
+  padding-bottom: var(--top-bar-height);
+  height: var(--top-bar-height);
+  width: 100%;
+  clear: both;
+}
+#smindex {
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+html {
+  /* Element content width includes border and padding with border-box; default is content-box, which does not. Margin is the outermost layer outside even the border, and is not included in box-sizing. */
+  box-sizing: border-box;
+}
+/* Universal box-sizing to border-box. */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/**
+Use :root to declare global CSS variables. These are safely used in any stylesheets, even those imported at the top of this file.
+*/
+:root {
+  --top-bar-height: 4rem;
+  --main-text-color: white;
+  --main-brand-color: #00bfff;
+}
+/* Ensure that the hidden attribute always means display as none. */
+[hidden] {
+  display: none !important;
+}
+body {
+  /* use flex display */
+  display: flex;
+  /* content within the body should be flexed into column */
+  flex-direction: column;
+  /* create vertical/horizonatal scrollbars automatically if necessary */
+  overflow: auto;
+  /* if text reaches end of line in a contain, this says to break the text anywhere within a word if necessary to fit within that container */
+  overflow-wrap: anywhere;
+  /* no margins by default */
+  margin: 0px;
+  /* dark gray background color */
+  background-color: #414141;
+}
+/* Hide the scrollbar and reserve space for it */
+body::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+/* Style the track of the scrollbar */
+body::-webkit-scrollbar-track {
+  background: #555;
+  width: 1rem;
+}
+/* Style the thumb of the scrollbar */
+body::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 1rem;
+}
+ul {
+  border: 1px solid black;
+  padding-inline-start: 2rem;
+}
+li {
+  display: flex;
+  line-height: 1.4rem;
+  margin: 0;
+  color: var(--main-text-color);
+  background-color: #777;
+}
+li:nth-of-type(odd) {
+  /* Alternate li background colors for readability */
+  background-color: #555;
+}
+a {
+  color: var(--main-text-color);
+  /* no text decoration (such as the default underline) */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+pre {
+  white-space: pre-wrap;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.75rem;
+}
+h6 {
+  font-size: 0.5rem;
+}

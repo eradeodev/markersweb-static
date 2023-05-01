@@ -1,1 +1,0 @@
-import{e as r}from"./utils.38da691b.js";async function a({fetch:t,params:e}){console.log("Loading data...");let o=null;return e.overrideData!=null&&(o=e.overrideData),r(o)}const n=Object.freeze(Object.defineProperty({__proto__:null,load:a},Symbol.toStringTag,{value:"Module"}));export{n as _,a as l};
